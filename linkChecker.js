@@ -1,7 +1,7 @@
 javascript:(function(){
 	var linkChecker = {
 		isValidLink: function(l){
-			return l.parentNode.className.match(/icon/) != null;
+			return l.className.match(/icon/) != null;
 		}
 		// isOtherSOmething: function(l){
 		// 	//extra code for other functions.
