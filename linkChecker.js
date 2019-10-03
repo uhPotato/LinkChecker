@@ -23,7 +23,7 @@ javascript:(function(){
 	for(var i = 0; i < links.length; i++){
 		var link = links[i];
 		if(typeof processedLinks[link.href] === 'undefined'){
-			processedLinks[link.href] = true;
+			processedLinks[link.href] = false;
 		
 			if(linkChecker.isValidLink(link)){
 				
