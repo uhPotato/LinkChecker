@@ -1,17 +1,11 @@
 javascript:(function(){
 	var linkChecker = {
-		isChapterNavLink: function(l){
+		isValidLink: function(l){
 			return l.getAttribute('class') != null || l.className.match('ac-gf-directory-column-section-link') != null;
-		},
-		isAnalyticsRegion: function(l){
-			return l.parentNode.className.match('data-analytics-region') != null;
-		},
-		isAnalyticsTitle: function(l){
-			return l.getAttribute('data-analytics-title') != null;
-		},
-		isOtherSOmething: function(l){
-			
 		}
+		// isOtherSOmething: function(l){
+		// 	//extra code for other functions.
+		// }
 	};
 	
 	var processedLinks = {};
@@ -31,11 +25,11 @@ javascript:(function(){
 		if(typeof processedLinks[link.href] === 'undefined'){
 			processedLinks[link.href] = true;
 		
-			if(linkChecker.isChapterNavLink(link)){
+			if(linkChecker.isValidLink(link)){
 				
 				var href = link.getAttribute('href');
 				var title = link.getAttribute('title');
-                tbl += '<tr><td><a href="' + link+ '">' + title + '</a></td></tr>';
+                tbl += '<tr><td><a href="' + link + '">' + title + '</a></td></tr>';
                 console.log(link.href);
 			}
 		}
