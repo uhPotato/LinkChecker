@@ -1,7 +1,7 @@
 javascript:(function(){
 	var linkChecker = {
 		isChapterNavLink: function(l){
-			return l.getAttribute('class') != null || l.parentNode.className.match('chapternav') != null;
+			return l.getAttribute('class') != null || l.className.match('ac-gf-directory-column-section-link') != null;
 		},
 		isAnalyticsRegion: function(l){
 			return l.parentNode.className.match('data-analytics-region') != null;
@@ -35,8 +35,8 @@ javascript:(function(){
 				
 				var href = link.getAttribute('href');
 				var title = link.getAttribute('title');
-                tbl += '<tr><td><a href="' + link + '">' + title + '</a></td></tr>';
-                console.log(link);
+                tbl += '<tr><td><a href="' + link+ '">' + title + '</a></td></tr>';
+                console.log(link.href);
 			}
 		}
 	}
