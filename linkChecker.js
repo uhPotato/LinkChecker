@@ -1,7 +1,7 @@
 javascript:(function(){
 	var linkChecker = {
 		isValidLink: function(l){
-			return l.className.match(/icon/) != null;
+			return l.getAttribute('data-analytics-region') != null && l.getAttribute('data-analytics-title') != null;
 		}
 		// isOtherSOmething: function(l){
 		// 	//extra code for other functions.
