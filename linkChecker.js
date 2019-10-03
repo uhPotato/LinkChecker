@@ -29,7 +29,8 @@ javascript:(function(){
 				
 				var href = link.getAttribute('href');
 				var analytics = link.getAttribute('data-analytics-region');
-                tbl += '<tr><td><a href="' + href + '">' + analytics + '</a></td></tr>';
+				var analyticsTitle = link.getAttribute('data-analyitcs-title');
+                tbl += '<tr><td><a href="' + href + '">' + href + '</a><p>Analytics Title: ' + analyticsTitle + ' and Analytics Region: ' + analytics + ' </p></td></tr>';
                 console.log(link.href);
 			}
 		}
