@@ -28,8 +28,8 @@ javascript:(function(){
 			if(linkChecker.isValidLink(link)){
 				
 				var href = link.getAttribute('href');
-				var title = link.getAttribute('title');
-                tbl += '<tr><td><a href="' + href + '">' + title + '</a></td></tr>';
+				var analytics = link.getAttribute('data-analytics-region');
+                tbl += '<tr><td><a href="' + href + '">' + analytics + '</a></td></tr>';
                 console.log(link.href);
 			}
 		}
