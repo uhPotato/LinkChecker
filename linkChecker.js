@@ -22,8 +22,8 @@ javascript:(function(){
     
 	for(var i = 0; i < links.length; i++){
 		var link = links[i];
-		if(typeof processedLinks[link.href] === 'undefined'){
-			processedLinks[link.href] = false;
+		// if(typeof processedLinks[link.href] === 'undefined'){
+		// 	processedLinks[link.href] = false;
 		
 			if(linkChecker.isValidLink(link)){
 				
@@ -33,7 +33,7 @@ javascript:(function(){
                 tbl += '<tr><td><a href="' + href + '">' + href + '</a><p>Analytics Title: ' + analyticsTitle + ' and Analytics Region: ' + analytics + ' </p></td></tr>';
                 console.log(link.href);
 			}
-		}
+		// }
 	}
 	
 	tbl += '</tbody></table>';
