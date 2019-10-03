@@ -29,7 +29,7 @@ javascript:(function(){
 				
 				var href = link.getAttribute('href');
 				var title = link.getAttribute('title');
-                tbl += '<tr><td><a href="' + link + '">' + title + '</a></td></tr>';
+                tbl += '<tr><td><a href="' + href + '">' + title + '</a></td></tr>';
                 console.log(link.href);
 			}
 		}
