@@ -1,7 +1,7 @@
 javascript:(function(){
 	var linkChecker = {
 		isValidLink: function(l){
-			return l.getAttribute('class') != null || l.className.match('ac-gf-directory-column-section-link') != null;
+			return l.getAttribute('data-analytics-region') != null || l.parentNode.className.match(/icon/) != null;
 		}
 		// isOtherSOmething: function(l){
 		// 	//extra code for other functions.
