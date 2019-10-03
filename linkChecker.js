@@ -23,7 +23,7 @@ javascript:(function(){
 	var tblContainer = document.createElement('div');
 		
 	var tbl = '<table style="font-size: 16px; line-height:20px;">';
-	tbl += '<thead style="font-weight:bold;"><tr><td>Referenced Articles</td></tr></thead><tbody>';
+	tbl += '<thead style="font-weight:bold;"><tr><td>Link List</td></tr></thead><tbody>';
 
     
 	for(var i = 0; i < links.length; i++){
