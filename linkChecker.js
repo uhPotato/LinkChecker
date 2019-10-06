@@ -3,7 +3,7 @@ javascript:(function(){
 		// isValidLink: function(l){
 		// 	return l.getAttribute('data-analytics-region') != null && l.getAttribute('data-analytics-title') != null;
 		// }
-		isGlobalNav: function(l){
+		isNotGlobalNav: function(l){
 			return l.getAttribute('class') != 'ac-gn-link';
 		},
 		isGlobalFooter: function(l){
@@ -27,7 +27,7 @@ javascript:(function(){
 	for(var i = 0; i < links.length; i++){
 		var link = links[i];
 		
-			if(!linkChecker.isGlobalNav(link) &&
+			if(linkChecker.isNotGlobalNav(link) &&
 				!linkChecker.isGlobalFooter(link)){
 				
 				var href = link.getAttribute('href');
