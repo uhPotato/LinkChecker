@@ -7,7 +7,7 @@ javascript:(function(){
 			return l.getAttribute('class') != 'ac-gn-link';
 		},
 		isGlobalFooter: function(l){
-			return l.getAttribute('class').includes('ac-gf');
+			return l.getAttribute('class') != null && l.getAttribute('class').includes('ac-gf');
 		}
 	};
 
