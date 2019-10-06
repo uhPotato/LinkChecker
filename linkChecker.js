@@ -6,8 +6,8 @@ javascript:(function(){
 		isNotGlobalNav: function(l){
 			return l.getAttribute('class') != 'ac-gn-link';
 		},
-		isGlobalFooter: function(l){
-			return l.getAttribute('class') != null && l.getAttribute('class').includes('ac-gf');
+		isNotGlobalFooter: function(l){
+			return !l.getAttribute('class') != null && l.getAttribute('class').includes('ac-gf');
 		}
 	};
 
@@ -28,7 +28,8 @@ javascript:(function(){
 		var link = links[i];
 		
 			if(linkChecker.isNotGlobalNav(link) &&
-				!linkChecker.isGlobalFooter(link)){
+				linkChecker.isNotGlobalFooter(link) &&
+				link.getAttribute('data-analytics-region') != null){
 				
 				var href = link.getAttribute('href');
 				var analytics = link.getAttribute('data-analytics-region');
