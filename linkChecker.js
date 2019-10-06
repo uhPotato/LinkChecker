@@ -41,11 +41,11 @@ javascript:(function(){
 	header.innerHTML = docTitle;
 	tblBorder.innterHTML = border;
 	tblContainer.innerHTML = tbl;
-	resultsWindows.document.head.innerHTML = '';
-	resultsWindows.document.body.innerHTML = '';
-	resultsWindows.document.head.appendChild(tblBorder);
-	resultsWindows.document.body.appendChild(header);
-	resultsWindows.document.body.appendChild(tblContainer);
-	resultsWindows.document.title = docTitle;
+	resultsWindow.document.head.innerHTML = '';
+	resultsWindow.document.body.innerHTML = '';
+	resultsWindow.document.head.appendChild(tblBorder);
+	resultsWindow.document.body.appendChild(header);
+	resultsWindow.document.body.appendChild(tblContainer);
+	resultsWindow.document.title = docTitle;
 
 }());
