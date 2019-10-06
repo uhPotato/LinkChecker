@@ -4,7 +4,9 @@ javascript:(function(){
 		// 	return l.getAttribute('data-analytics-region') != null && l.getAttribute('data-analytics-title') != null;
 		// }
 		isNotGlobalNav: function(l){
-			return l.getAttribute('class') != 'ac-gn-link';
+			if (l.getAttribute('class') != null) {
+				return !l.getAttribute('class').includes('ac-gn');
+			}			
 		},
 		isNotGlobalFooter: function(l){
 			if (l.getAttribute('class') != null) {
