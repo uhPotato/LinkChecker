@@ -15,7 +15,7 @@ javascript:(function(){
 	var border = 'table, th, td { padding: 10px; border: 1px solid black; border-collapse: collapse;}';
 
 	var tbl = '<table border="1";style="font-size: 16px; line-height:20px;">';
-	tbl += '<thead style="font-weight:bold;"><tr><td>Link List</td></tr></thead><tbody>';
+	tbl += '<thead style="font-weight:bold;"><tr><td>Link List</td><td>Title</td><td>Region</td><td>Aria-Label</td></tr></thead><tbody>';
 
     
 	for(var i = 0; i < links.length; i++){
