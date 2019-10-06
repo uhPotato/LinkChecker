@@ -9,7 +9,6 @@ javascript:(function(){
 	var links = document.links;
 	var docTitle = document.title;
 	var header = document.createElement('h2');
-	// var par = document.createElement('p');
 	var tblContainer = document.createElement('div');
 	var tblBorder = document.createElement('style');
 	
@@ -39,7 +38,6 @@ javascript:(function(){
 
 		
 	header.innerHTML = docTitle;
-	// par.innerHTML = "Hello";
 	tblBorder.innterHTML = border;
 	tblContainer.innerHTML = tbl;
 	document.body.innerHTML = '';
