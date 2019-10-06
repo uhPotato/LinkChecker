@@ -11,6 +11,7 @@ javascript:(function(){
 	var header = document.createElement('h2');
 	var tblContainer = document.createElement('div');
 	var tblBorder = document.createElement('style');
+	var resultsWindow = window.open("", "resultsWindow", "width=200,height=100");
 	
 	var border = 'table, th, td { padding: 10px; border: 1px solid black; border-collapse: collapse;}';
 
@@ -40,11 +41,11 @@ javascript:(function(){
 	header.innerHTML = docTitle;
 	tblBorder.innterHTML = border;
 	tblContainer.innerHTML = tbl;
-	document.head.innerHTML = '';
-	document.body.innerHTML = '';
-	document.head.appendChild(tblBorder);
-	document.body.appendChild(header);
-	document.body.appendChild(tblContainer);
-	document.title = docTitle;
+	resultsWindows.document.head.innerHTML = '';
+	resultsWindows.document.body.innerHTML = '';
+	resultsWindows.document.head.appendChild(tblBorder);
+	resultsWindows.document.body.appendChild(header);
+	resultsWindows.document.body.appendChild(tblContainer);
+	resultsWindows.document.title = docTitle;
 
 }());
