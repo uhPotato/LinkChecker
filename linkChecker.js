@@ -39,8 +39,9 @@ javascript:(function(){
 				var analytics = link.getAttribute('data-analytics-region');
 				var analyticsTitle = link.getAttribute('data-analytics-title');
 				var ariaLable = link.getAttribute('aria-label');
+				var nullLink = "Aria Lable: null";
 				if (ariaLable == null) {
-					tbl += '<tr><td><a href="' + href + '">' + href + '</a></td><td>Analytics Title: ' + analyticsTitle + '</td><td>Analytics Region: ' + analytics + '</td><td>Aria-Lable: ' + ariaLable.fontcolor('red') + '</td></tr>';
+					tbl += '<tr><td><a href="' + href + '">' + href + '</a></td><td>Analytics Title: ' + analyticsTitle + '</td><td>Analytics Region: ' + analytics + '</td><td>Aria-Lable: ' + nullLink.fontcolor('red') + '</td></tr>';
 				} else {
 					tbl += '<tr><td><a href="' + href + '">' + href + '</a></td><td>Analytics Title: ' + analyticsTitle + '</td><td>Analytics Region: ' + analytics + '</td><td>Aria-Lable: ' + ariaLable + '</td></tr>';
 				}
