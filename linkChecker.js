@@ -36,15 +36,15 @@ javascript:(function(){
 				linkChecker.isNotGlobalFooter(link)){
 				
 				var href = link.getAttribute('href');
-				var analytics = link.getAttribute('data-analytics-region');
+				var analyticsRegion = link.getAttribute('data-analytics-region');
 				var analyticsTitle = link.getAttribute('data-analytics-title');
 				var ariaLable = link.getAttribute('aria-label');
-				var nullVal = "Aria-Lable: null";
-				if (ariaLable == null) {
-					tbl += '<tr><td><a href="' + href + '">' + href + '</a></td><td>Analytics Title: ' + analyticsTitle + '</td><td>Analytics Region: ' + analytics + '</td><td>' + nullVal.fontcolor('red') + '</td></tr>';
-				} else {
-					tbl += '<tr><td><a href="' + href + '">' + href + '</a></td><td>Analytics Title: ' + analyticsTitle + '</td><td>Analytics Region: ' + analytics + '</td><td>Aria-Lable: ' + ariaLable + '</td></tr>';
-				}
+				var arialTd = (ariaLable != null) ? ariaLable : "Aria-Lable: null".fontcolor('red');
+				var regionTd = (analyticsRegion != null) ? analyticsRegion : "Analytics Region: null".fontcolor('red');
+				var titleTd = (analyticsTitle != null) ? analyticsTitle : "Analytics Title: null".fontcolor('red');
+			
+				tbl += '<tr><td><a href="' + href + '">' + href + '</a></td><td>' + titleTd + '</td><td>' + regionTd + '</td><td>' + arialTd + '</td></tr>';
+				
 			}
 	}
 	
