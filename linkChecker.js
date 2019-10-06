@@ -14,7 +14,7 @@ javascript:(function(){
 	
 	var border = 'table, th, td { padding: 10px; border: 1px solid black; border-collapse: collapse;}';
 
-	var tbl = '<table style="font-size: 16px; line-height:20px;">';
+	var tbl = '<table border="1";style="font-size: 16px; line-height:20px;">';
 	tbl += '<thead style="font-weight:bold;"><tr><td>Link List</td></tr></thead><tbody>';
 
     
@@ -40,6 +40,7 @@ javascript:(function(){
 	header.innerHTML = docTitle;
 	tblBorder.innterHTML = border;
 	tblContainer.innerHTML = tbl;
+	document.head.innerHTML = '';
 	document.body.innerHTML = '';
 	document.head.appendChild(tblBorder);
 	document.body.appendChild(header);
