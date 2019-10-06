@@ -3,12 +3,8 @@ javascript:(function(){
 		isValidLink: function(l){
 			return l.getAttribute('data-analytics-region') != null && l.getAttribute('data-analytics-title') != null;
 		}
-		// isOtherSOmething: function(l){
-		// 	//extra code for other functions.
-		// }
+
 	};
-	
-	var processedLinks = {};
 
 	var links = document.links;
 	var docTitle = document.title;
@@ -28,7 +24,8 @@ javascript:(function(){
 				var href = link.getAttribute('href');
 				var analytics = link.getAttribute('data-analytics-region');
 				var analyticsTitle = link.getAttribute('data-analytics-title');
-                tbl += '<tr><td><a href="' + href + '">' + href + '</a><p>Analytics Title: ' + analyticsTitle + ' and Analytics Region: ' + analytics + ' </p></td></tr>';
+				var ariaLable = link.getAttribute('aria-label');
+                tbl += '<tr><td><a href="' + href + '">' + href + '</a></td><td>Analytics Title: ' + analyticsTitle + '</td><td>Analytics Region: ' + analytics + '</td><td> and Aria-Lable: ' + ariaLable + '</td></tr>';
                 console.log(link.href);
 			}
 	}
