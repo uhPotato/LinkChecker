@@ -41,7 +41,7 @@ javascript:(function(){
 	tblBorder.innterHTML = border;
 	tblContainer.innerHTML = tbl;
 	document.body.innerHTML = '';
-	document.body.appendChild(header,tblBorder);
+	document.body.appendChild(header);
 	document.body.appendChild(par);
 	document.body.appendChild(tblContainer);
 	document.title = docTitle;
