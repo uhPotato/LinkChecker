@@ -31,8 +31,7 @@ javascript:(function(){
 		var link = links[i];
 		
 			if(linkChecker.isNotGlobalNav(link) &&
-				linkChecker.isNotGlobalFooter(link) &&
-				link.getAttribute('data-analytics-region') != null){
+				linkChecker.isNotGlobalFooter(link)){
 				
 				var href = link.getAttribute('href');
 				var analytics = link.getAttribute('data-analytics-region');
