@@ -12,7 +12,7 @@ javascript:(function(){
 	var tblContainer = document.createElement('div');
 	var tblBorder = document.createElement('style');
 	
-	var border = '<style>table, th, td { padding: 10px; border: 1px solid black; border-collapse: collapse;</style>';
+	var border = 'table, th, td { padding: 10px; border: 1px solid black; border-collapse: collapse;}';
 
 	var tbl = '<table style="font-size: 16px; line-height:20px;">';
 	tbl += '<thead style="font-weight:bold;"><tr><td>Link List</td></tr></thead><tbody>';
