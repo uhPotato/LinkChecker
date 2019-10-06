@@ -1,9 +1,14 @@
 javascript:(function(){
 	var linkChecker = {
-		isValidLink: function(l){
-			return l.getAttribute('data-analytics-region') != null && l.getAttribute('data-analytics-title') != null;
+		// isValidLink: function(l){
+		// 	return l.getAttribute('data-analytics-region') != null && l.getAttribute('data-analytics-title') != null;
+		// }
+		isNotGlobaNav: function(l){
+			return l.getAttribute('class') != 'ac-gn-link';
+		},
+		isNotGlobalFooter: function(l){
+			return !l.getAttribute('class').includes('ac-gf');
 		}
-
 	};
 
 	var links = document.links;
