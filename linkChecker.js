@@ -9,8 +9,9 @@ javascript:(function(){
 	var links = document.links;
 	var docTitle = document.title;
 	var header = document.createElement('h2');
-	var par = document.createElement('p');
+	// var par = document.createElement('p');
 	var tblContainer = document.createElement('div');
+	var tblBorder = document.createElement('style');
 	
 	var border = '<style>table, th, td { padding: 10px; border: 1px solid black; border-collapse: collapse;</style>';
 
@@ -38,10 +39,11 @@ javascript:(function(){
 
 		
 	header.innerHTML = docTitle;
-	par.innerHTML = "Hello";
+	// par.innerHTML = "Hello";
+	tblBorder.innterHTML = border;
 	tblContainer.innerHTML = tbl;
 	document.body.innerHTML = '';
-	document.body.appendChild(header);
+	document.body.appendChild(header,tblBorder);
 	document.body.appendChild(par);
 	document.body.appendChild(tblContainer);
 	document.title = docTitle;
