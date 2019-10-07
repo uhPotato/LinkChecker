@@ -53,11 +53,11 @@ javascript:(function(){
 
 		
 	header.innerHTML = docTitle;
-	tblBorder.innterHTML = border;
+	tblBorder.innerHTML = border;
 	tblContainer.innerHTML = tbl;
 	resultsWindow.document.head.innerHTML = '';
 	resultsWindow.document.body.innerHTML = '';
-	resultsWindow.document.head.style.appendChild(tblBorder);
+	resultsWindow.document.head.appendChild(tblBorder);
 	resultsWindow.document.body.appendChild(header);
 	resultsWindow.document.body.appendChild(tblContainer);
 	resultsWindow.document.title = docTitle;
