@@ -1,7 +1,7 @@
 javascript:(function(){
 	var linkChecker = {
-		// isValidLink: function(l){
-		// 	return l.getAttribute('data-analytics-region') != null && l.getAttribute('data-analytics-title') != null;
+		// isBuyLink: function(l){
+		// 	Not sure if this is wanted
 		// }
 		isNotGlobalNav: function(l){
 			if (l.getAttribute('class') != null) {
@@ -39,6 +39,7 @@ javascript:(function(){
 				var analyticsRegion = link.getAttribute('data-analytics-region');
 				var analyticsTitle = link.getAttribute('data-analytics-title');
 				var ariaLable = link.getAttribute('aria-label');
+
 				var arialTd = (ariaLable != null) ? ariaLable : "Aria-Lable: null".fontcolor('red');
 				var regionTd = (analyticsRegion != null) ? analyticsRegion : "Analytics Region: null".fontcolor('red');
 				var titleTd = (analyticsTitle != null) ? analyticsTitle : "Analytics Title: null".fontcolor('red');
@@ -50,15 +51,13 @@ javascript:(function(){
 	
 	tbl += '</tbody></table>';
 
-
-
 		
 	header.innerHTML = docTitle;
 	tblBorder.innterHTML = border;
 	tblContainer.innerHTML = tbl;
 	resultsWindow.document.head.innerHTML = '';
 	resultsWindow.document.body.innerHTML = '';
-	resultsWindow.document.head.appendChild(tblBorder);
+	resultsWindow.document.head.style.appendChild(tblBorder);
 	resultsWindow.document.body.appendChild(header);
 	resultsWindow.document.body.appendChild(tblContainer);
 	resultsWindow.document.title = docTitle;
