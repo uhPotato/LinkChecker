@@ -14,7 +14,10 @@ javascript:(function(){
 			}	
 		},
 		isNoteFootnote: function(l) {
-			return !l.getAttribute('href').includes('footnote');
+			if (l.getAttribute('class') != null){
+				return !l.getAttribute('class').includes('footnote');
+			}
+
 		}
 	};
 
