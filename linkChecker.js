@@ -55,7 +55,7 @@ javascript:(function(){
 	header.innerHTML = docTitle;
 	tblBorder.innerHTML = border;
 	tblContainer.innerHTML = tbl;
-	resultsWindow.document.head.innerHTML = '';
+	// resultsWindow.document.head.innerHTML = '';
 	resultsWindow.document.body.innerHTML = '';
 	resultsWindow.document.head.appendChild(tblBorder);
 	resultsWindow.document.body.appendChild(header);
