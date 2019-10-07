@@ -13,8 +13,8 @@ javascript:(function(){
 				return !l.getAttribute('class').includes('ac-gf');
 			}	
 		},
-		isFootnote: function(l) {
-			return !l.getAttribute('href').includes("#footnote");
+		isNoteFootnote: function(l) {
+			return !l.getAttribute('href').includes('footnote');
 		}
 	};
 
@@ -36,7 +36,7 @@ javascript:(function(){
 		
 			if(linkChecker.isNotGlobalNav(link) &&
 				linkChecker.isNotGlobalFooter(link) &&
-					linkChecker.isFootnote(link)){
+					linkChecker.isNotFootnote(link)){
 				
 				var href = link.getAttribute('href');
 				var analyticsRegion = link.getAttribute('data-analytics-region');
