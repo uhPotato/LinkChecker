@@ -15,7 +15,7 @@ javascript:(function(){
 		},
 		isNotFootnote: function(l) {
 			if (l.getAttribute('class') != null){
-				return !l.getAttribute('class').includes('#ootnote');
+				return !l.getAttribute('class').includes('footnote');
 			}
 		}
 	};
