@@ -14,8 +14,8 @@ javascript:(function(){
 			}	
 		},
 		isNotFootnote: function(l) {
-			if (l.getAttribute('class') != null){
-				return !l.getAttribute('class').includes('footnote');
+			if (l.getAttribute('href') != null){
+				return !l.getAttribute('href').includes('#');
 			}
 		}
 	};
