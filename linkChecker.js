@@ -38,8 +38,8 @@ javascript:(function(){
 		var link = links[i];
 		
 			if(linkChecker.isNotGlobalNav(link) &&
-				linkChecker.isNotGlobalFooter(link) &&
-					linkChecker.isNotFootnote(link)){
+				linkChecker.isNotFootnote(link) &&
+				linkChecker.isNotGlobalFooter(link)){
 				
 				var href = link.getAttribute('href');
 				var analyticsRegion = link.getAttribute('data-analytics-region');
