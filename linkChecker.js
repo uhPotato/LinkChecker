@@ -13,7 +13,7 @@ javascript:(function(){
 				return !l.getAttribute('class').includes('ac-gf');
 			}	
 		},
-		isNoteFootnote: function(l) {
+		isNotFootnote: function(l) {
 			if (l.getAttribute('class') != null && l.getAttribute('href').includes('footnote')){
 				return !l.getAttribute('class').includes('footnote');
 			}
