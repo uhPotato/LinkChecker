@@ -11,8 +11,10 @@ javascript:(function(){
 		isNotGlobalFooter: function(l){
 			if (l.getAttribute('class') != null) {
 				return !l.getAttribute('class').includes('ac-gf');
-			}
-			
+			}	
+		},
+		isFootnote: function(l) {
+			return !l.getAttribute('href').includes("#footnote");
 		}
 	};
 
@@ -33,14 +35,15 @@ javascript:(function(){
 		var link = links[i];
 		
 			if(linkChecker.isNotGlobalNav(link) &&
-				linkChecker.isNotGlobalFooter(link)){
+				linkChecker.isNotGlobalFooter(link) &&
+					linkChecker.isFootnote(link)){
 				
 				var href = link.getAttribute('href');
 				var analyticsRegion = link.getAttribute('data-analytics-region');
 				var analyticsTitle = link.getAttribute('data-analytics-title');
-				var ariaLable = link.getAttribute('aria-label');
+				var ariaLabel = link.getAttribute('aria-label');
 
-				var arialTd = (ariaLable != null) ? ariaLable : "Aria-Lable: null".fontcolor('red');
+				var arialTd = (ariaLabel != null) ? ariaLabel : "Aria-Label: null".fontcolor('red');
 				var regionTd = (analyticsRegion != null) ? analyticsRegion : "Analytics Region: null".fontcolor('red');
 				var titleTd = (analyticsTitle != null) ? analyticsTitle : "Analytics Title: null".fontcolor('red');
 			
@@ -55,7 +58,7 @@ javascript:(function(){
 	header.innerHTML = docTitle;
 	tblBorder.innerHTML = border;
 	tblContainer.innerHTML = tbl;
-	// resultsWindow.document.head.innerHTML = '';
+
 	resultsWindow.document.body.innerHTML = '';
 	resultsWindow.document.head.appendChild(tblBorder);
 	resultsWindow.document.body.appendChild(header);
