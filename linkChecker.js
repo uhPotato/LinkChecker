@@ -19,6 +19,13 @@ javascript:(function(){
 				!l.getAttribute('href').includes('footnote');
 				
 			}
+		},
+		isBuyLink: function(l) {
+			if (l.getAttribute('class') != null){
+				return !l.getAttribute('href').includes('/shop/goto/') ||
+				!l.getAttribute('class').includes('buy');
+				
+			}
 		}
 	};
 
@@ -40,7 +47,8 @@ javascript:(function(){
 		
 			if(linkChecker.isNotGlobalNav(link) &&
 				linkChecker.isNotFootnote(link) &&
-				linkChecker.isNotGlobalFooter(link)){
+				linkChecker.isNotGlobalFooter(link) &&
+				linkChecker.isBuyLink(link)){
 				
 				var href = link.getAttribute('href');
 				var analyticsRegion = link.getAttribute('data-analytics-region');
@@ -62,8 +70,6 @@ javascript:(function(){
 	header.innerHTML = docTitle;
 	tblBorder.innerHTML = border;
 	tblContainer.innerHTML = tbl;
-
-	console.log(resultsWindow.document);
 
 	resultsWindow.document.body.innerHTML = '';
 	resultsWindow.document.head.appendChild(tblBorder);
