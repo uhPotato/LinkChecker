@@ -63,6 +63,8 @@ javascript:(function(){
 	tblBorder.innerHTML = border;
 	tblContainer.innerHTML = tbl;
 
+	console.log(resultsWindow.document);
+
 	resultsWindow.document.body.innerHTML = '';
 	resultsWindow.document.head.appendChild(tblBorder);
 	resultsWindow.document.body.appendChild(header);
