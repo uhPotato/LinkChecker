@@ -15,13 +15,7 @@ javascript:(function(){
 		},
 		isNotFootnote: function(l) {
 			if (l.getAttribute('class') != null){
-				if (l.getAttribute('class').equals('footnote')) {
-					console.log(l);
-				}
-				if (l.getAttribute('href').includes('footnote')) {
-					console.log(l);
-				}
-				return !l.getAttribute('class').equals('footnote') || 
+				return !l.getAttribute('class').includes('footnote') || 
 				!l.getAttribute('href').includes('footnote');
 				
 			}
