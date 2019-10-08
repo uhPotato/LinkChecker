@@ -20,7 +20,7 @@ javascript:(function(){
 				
 			}
 		},
-		isBuyLink: function(l) {
+		isNotBuyLink: function(l) {
 			if (l.getAttribute('class') != null){
 				return !l.getAttribute('href').includes('/shop/goto/') ||
 				!l.getAttribute('class').includes('buy');
@@ -47,8 +47,8 @@ javascript:(function(){
 		
 			if(linkChecker.isNotGlobalNav(link) &&
 				linkChecker.isNotFootnote(link) &&
-				linkChecker.isNotGlobalFooter(link) &&
-				linkChecker.isBuyLink(link)){
+				linkChecker.isNotBuyLink(link) &&
+				linkChecker.isNotGlobalFooter(link)){
 				
 				var href = link.getAttribute('href');
 				var analyticsRegion = link.getAttribute('data-analytics-region');
