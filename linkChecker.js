@@ -27,7 +27,7 @@ javascript:(function(){
 	var header = document.createElement('h2');
 	var tblContainer = document.createElement('div');
 	var tblBorder = document.createElement('style');
-	var resultsWindow = window.open("", "resultsWindow", "width=1200,height=1000");
+	var resultsWindow = window.open("", "resultsWindow", "width=1600,height=1000");
 	
 	var border = 'table, th, td { padding: 10px; border: 1px solid black; border-collapse: collapse;}';
 
